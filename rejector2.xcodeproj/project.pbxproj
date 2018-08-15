@@ -7,7 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C9CF232B2124D81700E3FE55 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C9CF232A2124D81700E3FE55 /* main.cpp */; };
+		C93DC8542124D90F0030839D /* Makefile in Sources */ = {isa = PBXBuildFile; fileRef = C93DC8512124D90E0030839D /* Makefile */; };
+		C93DC8552124D90F0030839D /* Makefile in Sources */ = {isa = PBXBuildFile; fileRef = C93DC8512124D90E0030839D /* Makefile */; };
+		C9B29BB62124D951009CF170 /* loops.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C9B29BB52124D951009CF170 /* loops.cpp */; };
+		C9B29BB92124D96D009CF170 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C9B29BB82124D96D009CF170 /* main.cpp */; };
+		C9B29BBA2124D97C009CF170 /* tests.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C93DC85B2124D9310030839D /* tests.cpp */; };
+		C9B29BBB2124D97E009CF170 /* rejectorio.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C93DC85A2124D9310030839D /* rejectorio.cpp */; };
+		C9B29BBC2124D980009CF170 /* rdeme.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C93DC8572124D9300030839D /* rdeme.cpp */; };
+		C9B29BBD2124D983009CF170 /* public.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C93DC85D2124D9310030839D /* public.cpp */; };
+		C9B29BBE2124D987009CF170 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C93DC8562124D9300030839D /* main.cpp */; };
+		C9B29BBF2124D98C009CF170 /* CmdLine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C93DC8582124D9300030839D /* CmdLine.cpp */; };
+		C9B29BC02124D98D009CF170 /* CmdLine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C93DC8582124D9300030839D /* CmdLine.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -20,11 +30,48 @@
 			);
 			runOnlyForDeploymentPostprocessing = 1;
 		};
+		C9CF23332124D82F00E3FE55 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		C93DC8512124D90E0030839D /* Makefile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
+		C93DC8522124D90E0030839D /* rejectoruserguide.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = rejectoruserguide.pdf; sourceTree = "<group>"; };
+		C93DC8532124D90E0030839D /* rejector2notes.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = rejector2notes.pdf; sourceTree = "<group>"; };
+		C93DC8562124D9300030839D /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		C93DC8572124D9300030839D /* rdeme.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = rdeme.cpp; sourceTree = "<group>"; };
+		C93DC8582124D9300030839D /* CmdLine.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = CmdLine.cpp; sourceTree = "<group>"; };
+		C93DC8592124D9300030839D /* MersenneTwister.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MersenneTwister.h; sourceTree = "<group>"; };
+		C93DC85A2124D9310030839D /* rejectorio.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = rejectorio.cpp; sourceTree = "<group>"; };
+		C93DC85B2124D9310030839D /* tests.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = tests.cpp; sourceTree = "<group>"; };
+		C93DC85C2124D9310030839D /* CmdLine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CmdLine.h; sourceTree = "<group>"; };
+		C93DC85D2124D9310030839D /* public.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = public.cpp; sourceTree = "<group>"; };
+		C93DC85E2124D9310030839D /* rdeme.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = rdeme.h; sourceTree = "<group>"; };
+		C93DC85F2124D9310030839D /* public.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = public.h; sourceTree = "<group>"; };
+		C93DC8602124D9310030839D /* rejector.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = rejector.h; sourceTree = "<group>"; };
+		C93DC8612124D9310030839D /* arrays.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = arrays.h; sourceTree = "<group>"; };
+		C9B29BB52124D951009CF170 /* loops.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = loops.cpp; sourceTree = "<group>"; };
+		C9B29BB72124D96D009CF170 /* rej2run.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = rej2run.h; sourceTree = "<group>"; };
+		C9B29BB82124D96D009CF170 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		C9CF23272124D81700E3FE55 /* rejector2 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = rejector2; sourceTree = BUILT_PRODUCTS_DIR; };
-		C9CF232A2124D81700E3FE55 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		C9CF23352124D82F00E3FE55 /* rej2run */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = rej2run; sourceTree = BUILT_PRODUCTS_DIR; };
+		C9D019A02124D8C300B94114 /* rej2example.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = rej2example.txt; sourceTree = "<group>"; };
+		C9D019A12124D8C300B94114 /* rej2exampledna.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = rej2exampledna.txt; sourceTree = "<group>"; };
+		C9D019A22124D8C300B94114 /* rej2recomb.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = rej2recomb.txt; sourceTree = "<group>"; };
+		C9D019A32124D8C300B94114 /* rej2snps.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = rej2snps.txt; sourceTree = "<group>"; };
+		C9D019A42124D8C400B94114 /* liex.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = liex.txt; sourceTree = "<group>"; };
+		C9D019A52124D8C400B94114 /* allbutldp.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = allbutldp.txt; sourceTree = "<group>"; };
+		C9D019A62124D8D700B94114 /* rejector.r */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.rez; path = rejector.r; sourceTree = "<group>"; };
+		C9D019A72124D8D700B94114 /* gluedat.pl */ = {isa = PBXFileReference; lastKnownFileType = text.script.perl; path = gluedat.pl; sourceTree = "<group>"; };
+		C9D019A82124D8D700B94114 /* truedat.pl */ = {isa = PBXFileReference; lastKnownFileType = text.script.perl; path = truedat.pl; sourceTree = "<group>"; };
+		C9D019A92124D8D700B94114 /* makerej2in.pl */ = {isa = PBXFileReference; lastKnownFileType = text.script.perl; path = makerej2in.pl; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,13 +82,87 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		C9CF23322124D82F00E3FE55 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C93DBB472124D849002FCAA3 /* examples */ = {
+			isa = PBXGroup;
+			children = (
+				C9D019A52124D8C400B94114 /* allbutldp.txt */,
+				C9D019A42124D8C400B94114 /* liex.txt */,
+				C9D019A02124D8C300B94114 /* rej2example.txt */,
+				C9D019A12124D8C300B94114 /* rej2exampledna.txt */,
+				C9D019A22124D8C300B94114 /* rej2recomb.txt */,
+				C9D019A32124D8C300B94114 /* rej2snps.txt */,
+			);
+			path = examples;
+			sourceTree = "<group>";
+		};
+		C93DBB482124D851002FCAA3 /* scripts */ = {
+			isa = PBXGroup;
+			children = (
+				C9D019A72124D8D700B94114 /* gluedat.pl */,
+				C9D019A92124D8D700B94114 /* makerej2in.pl */,
+				C9D019A62124D8D700B94114 /* rejector.r */,
+				C9D019A82124D8D700B94114 /* truedat.pl */,
+			);
+			path = scripts;
+			sourceTree = "<group>";
+		};
+		C93DBB492124D857002FCAA3 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				C93DBB4B2124D893002FCAA3 /* rejector2 */,
+				C93DBB4A2124D883002FCAA3 /* rej2run */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		C93DBB4A2124D883002FCAA3 /* rej2run */ = {
+			isa = PBXGroup;
+			children = (
+				C9B29BB82124D96D009CF170 /* main.cpp */,
+				C9B29BB72124D96D009CF170 /* rej2run.h */,
+			);
+			path = rej2run;
+			sourceTree = "<group>";
+		};
+		C93DBB4B2124D893002FCAA3 /* rejector2 */ = {
+			isa = PBXGroup;
+			children = (
+				C93DC8612124D9310030839D /* arrays.h */,
+				C93DC8582124D9300030839D /* CmdLine.cpp */,
+				C93DC85C2124D9310030839D /* CmdLine.h */,
+				C9B29BB52124D951009CF170 /* loops.cpp */,
+				C93DC8562124D9300030839D /* main.cpp */,
+				C93DC8592124D9300030839D /* MersenneTwister.h */,
+				C93DC85D2124D9310030839D /* public.cpp */,
+				C93DC85F2124D9310030839D /* public.h */,
+				C93DC8572124D9300030839D /* rdeme.cpp */,
+				C93DC85E2124D9310030839D /* rdeme.h */,
+				C93DC8602124D9310030839D /* rejector.h */,
+				C93DC85A2124D9310030839D /* rejectorio.cpp */,
+				C93DC85B2124D9310030839D /* tests.cpp */,
+			);
+			path = rejector2;
+			sourceTree = "<group>";
+		};
 		C9CF231E2124D81700E3FE55 = {
 			isa = PBXGroup;
 			children = (
-				C9CF23292124D81700E3FE55 /* rejector2 */,
+				C93DC8512124D90E0030839D /* Makefile */,
+				C93DC8532124D90E0030839D /* rejector2notes.pdf */,
+				C93DC8522124D90E0030839D /* rejectoruserguide.pdf */,
+				C93DBB472124D849002FCAA3 /* examples */,
+				C93DBB482124D851002FCAA3 /* scripts */,
+				C93DBB492124D857002FCAA3 /* src */,
 				C9CF23282124D81700E3FE55 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -50,16 +171,9 @@
 			isa = PBXGroup;
 			children = (
 				C9CF23272124D81700E3FE55 /* rejector2 */,
+				C9CF23352124D82F00E3FE55 /* rej2run */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		C9CF23292124D81700E3FE55 /* rejector2 */ = {
-			isa = PBXGroup;
-			children = (
-				C9CF232A2124D81700E3FE55 /* main.cpp */,
-			);
-			path = rejector2;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -82,6 +196,23 @@
 			productReference = C9CF23272124D81700E3FE55 /* rejector2 */;
 			productType = "com.apple.product-type.tool";
 		};
+		C9CF23342124D82F00E3FE55 /* rej2run */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C9CF23392124D82F00E3FE55 /* Build configuration list for PBXNativeTarget "rej2run" */;
+			buildPhases = (
+				C9CF23312124D82F00E3FE55 /* Sources */,
+				C9CF23322124D82F00E3FE55 /* Frameworks */,
+				C9CF23332124D82F00E3FE55 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = rej2run;
+			productName = rej2run;
+			productReference = C9CF23352124D82F00E3FE55 /* rej2run */;
+			productType = "com.apple.product-type.tool";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -92,6 +223,9 @@
 				ORGANIZATIONNAME = matt;
 				TargetAttributes = {
 					C9CF23262124D81700E3FE55 = {
+						CreatedOnToolsVersion = 10.0;
+					};
+					C9CF23342124D82F00E3FE55 = {
 						CreatedOnToolsVersion = 10.0;
 					};
 				};
@@ -109,6 +243,7 @@
 			projectRoot = "";
 			targets = (
 				C9CF23262124D81700E3FE55 /* rejector2 */,
+				C9CF23342124D82F00E3FE55 /* rej2run */,
 			);
 		};
 /* End PBXProject section */
@@ -118,7 +253,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C9CF232B2124D81700E3FE55 /* main.cpp in Sources */,
+				C9B29BBF2124D98C009CF170 /* CmdLine.cpp in Sources */,
+				C9B29BBD2124D983009CF170 /* public.cpp in Sources */,
+				C93DC8542124D90F0030839D /* Makefile in Sources */,
+				C9B29BBB2124D97E009CF170 /* rejectorio.cpp in Sources */,
+				C9B29BB62124D951009CF170 /* loops.cpp in Sources */,
+				C9B29BBE2124D987009CF170 /* main.cpp in Sources */,
+				C9B29BBA2124D97C009CF170 /* tests.cpp in Sources */,
+				C9B29BBC2124D980009CF170 /* rdeme.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C9CF23312124D82F00E3FE55 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C9B29BC02124D98D009CF170 /* CmdLine.cpp in Sources */,
+				C9B29BB92124D96D009CF170 /* main.cpp in Sources */,
+				C93DC8552124D90F0030839D /* Makefile in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -254,6 +406,24 @@
 			};
 			name = Release;
 		};
+		C9CF233A2124D82F00E3FE55 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2ZV6Q2H5B8;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		C9CF233B2124D82F00E3FE55 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2ZV6Q2H5B8;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -271,6 +441,15 @@
 			buildConfigurations = (
 				C9CF232F2124D81700E3FE55 /* Debug */,
 				C9CF23302124D81700E3FE55 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C9CF23392124D82F00E3FE55 /* Build configuration list for PBXNativeTarget "rej2run" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C9CF233A2124D82F00E3FE55 /* Debug */,
+				C9CF233B2124D82F00E3FE55 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

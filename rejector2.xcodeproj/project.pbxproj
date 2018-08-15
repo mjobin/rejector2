@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C93DC8542124D90F0030839D /* Makefile in Sources */ = {isa = PBXBuildFile; fileRef = C93DC8512124D90E0030839D /* Makefile */; };
 		C93DC8552124D90F0030839D /* Makefile in Sources */ = {isa = PBXBuildFile; fileRef = C93DC8512124D90E0030839D /* Makefile */; };
 		C9B29BB62124D951009CF170 /* loops.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C9B29BB52124D951009CF170 /* loops.cpp */; };
 		C9B29BB92124D96D009CF170 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C9B29BB82124D96D009CF170 /* main.cpp */; };
@@ -257,7 +256,6 @@
 			files = (
 				C9B29BBF2124D98C009CF170 /* CmdLine.cpp in Sources */,
 				C9B29BBD2124D983009CF170 /* public.cpp in Sources */,
-				C93DC8542124D90F0030839D /* Makefile in Sources */,
 				C9B29BBB2124D97E009CF170 /* rejectorio.cpp in Sources */,
 				C9B29BB62124D951009CF170 /* loops.cpp in Sources */,
 				C9B29BBE2124D987009CF170 /* main.cpp in Sources */,

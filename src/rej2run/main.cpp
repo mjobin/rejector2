@@ -10,7 +10,7 @@
 #include <sys/stat.h>
 #include <sys/types.h>
 #include <sys/time.h>
-#include "../rejector2/CmdLine.h"
+#include "CmdLine.h"
 #include "rej2run.h"
 #include <unistd.h>
 

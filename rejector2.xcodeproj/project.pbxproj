@@ -18,6 +18,7 @@
 		C9B29BBF2124D98C009CF170 /* CmdLine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C93DC8582124D9300030839D /* CmdLine.cpp */; };
 		C9B29BC02124D98D009CF170 /* CmdLine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C93DC8582124D9300030839D /* CmdLine.cpp */; };
 		C9B420332124E0CF00B50401 /* reject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C9B420322124E0CE00B50401 /* reject.cpp */; };
+		C9B420362124E25500B50401 /* CmdLine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C9B420342124E25500B50401 /* CmdLine.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -62,6 +63,8 @@
 		C9B29BB82124D96D009CF170 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		C9B2A76C2124DD5F001788E0 /* cstring.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cstring.h; sourceTree = "<group>"; };
 		C9B420322124E0CE00B50401 /* reject.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = reject.cpp; sourceTree = "<group>"; };
+		C9B420342124E25500B50401 /* CmdLine.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CmdLine.cpp; sourceTree = "<group>"; };
+		C9B420352124E25500B50401 /* CmdLine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CmdLine.h; sourceTree = "<group>"; };
 		C9CF23272124D81700E3FE55 /* rejector2 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = rejector2; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9CF23352124D82F00E3FE55 /* rej2run */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = rej2run; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9D019A02124D8C300B94114 /* rej2example.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = rej2example.txt; sourceTree = "<group>"; };
@@ -130,6 +133,8 @@
 		C93DBB4A2124D883002FCAA3 /* rej2run */ = {
 			isa = PBXGroup;
 			children = (
+				C9B420342124E25500B50401 /* CmdLine.cpp */,
+				C9B420352124E25500B50401 /* CmdLine.h */,
 				C9B29BB82124D96D009CF170 /* main.cpp */,
 				C9B29BB72124D96D009CF170 /* rej2run.h */,
 			);
@@ -272,6 +277,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C9B420362124E25500B50401 /* CmdLine.cpp in Sources */,
 				C9B29BC02124D98D009CF170 /* CmdLine.cpp in Sources */,
 				C9B29BB92124D96D009CF170 /* main.cpp in Sources */,
 				C93DC8552124D90F0030839D /* Makefile in Sources */,

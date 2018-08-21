@@ -44,7 +44,7 @@
 
 
 #define MAX_LOCI_JUMP 500000
-#define ADJ_RECOMB_PROB 0.00000001 //chance of recombination between adjacent base pairts oper generation
+#define ADJ_RECOMB_PROB 0.00000001 //chance of recombination between adjacent base pairs over generation
 
 
 

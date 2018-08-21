@@ -1581,7 +1581,7 @@ double world::meanpairwise(vector<int>* y){
 
 //---------------------------------------------
 //Function Name:
-//Function Definition: Spits out the line for recombination in msHOt
+//Function Definition: Outputs the line for recombination in msHOt
 //just makes hotspots for very long, discontinuous jumps - otherwise averages across the distance
 string world::recrateandhotspots(double n0){
 	
@@ -1610,9 +1610,9 @@ string world::recrateandhotspots(double n0){
 	
 	double rho = 4.0 * n0 * ADJ_RECOMB_PROB * totwithin; 
 	
-	if (totwithin == 0.0) {
-		cerr << "WARNING: msHOT requires physical distances to calculate recombination (msHOT's -r switch). " << endl;
-		cerr << "Please include physical disatnces in your Rejector2 input file! Proceeding without passing recombination rates to msHOT." << endl;
+	if (totwithin <= 0.0) {
+		cerr << "WARNING: Rejector2 requires physical distances to calculate recombination (msHOT's -r switch). " << endl;
+		cerr << "Please include physical distances in your Rejector2 input file! Proceeding without passing recombination rates to msHOT." << endl;
 		return "";
 	}
 	

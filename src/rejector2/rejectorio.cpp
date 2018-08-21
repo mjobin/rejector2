@@ -499,6 +499,7 @@ priordist world::readinfile(ifstream &in)
 			newlocinfo.ancstate = inancStates[it];
 			newlocinfo.recrate = inrecRates[it];
 			newlocinfo.phdist = inphysDist[it];
+
 			
 			
 			//IGNORE Length listing for all but DNA. STR length MUST be 5 for Simcoal
@@ -5300,7 +5301,7 @@ world runsim(world *r, priordist *pt, bool poplock, string basefile)//this will 
 					//string msline =  makemsline(r, pt, poplock);
 					string msline =  s.makemsline(r, pt, poplock, false);
 					
-					//cout << "msline: " << msline << endl;
+//                    cout << "msline: " << msline << endl;
 					
 					
 					
@@ -5324,7 +5325,7 @@ world runsim(world *r, priordist *pt, bool poplock, string basefile)//this will 
 					return s;
 				}
 				
-				else if(simtype == 2){ // 1 means MaCS
+				else if(simtype == 2){ // 2 means MaCS
 					string msline =  s.makemsline(r, pt, poplock, true);
 					
 					if(msline == "error") {

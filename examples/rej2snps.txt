@@ -92,12 +92,12 @@ UBDeltaMuSquaredSub 0.1
 /--Data
 Vnaught	0
 
-Loci	SNP	
-MutRates	1.0e-9	
-Ancestral	A	
-RecombRt	0
-NumLoci	3
-Length	1
+Loci	SNP SNP SNP
+MutRates	1.0e-9  1.0e-9  1.0e-9
+Ancestral	A   A   A
+PhysDist	100000  1000    0
+NumLoci	1   1   1
+Length	1   1   1
 
 Tag	Population
 0_1	1	C	C	C

@@ -1597,8 +1597,7 @@ string world::recrateandhotspots(double n0){
 			
 		}
 		
-		
-		
+
 		else{
 			totwithin += loci[i].phdist;
 		}	
@@ -1611,9 +1610,9 @@ string world::recrateandhotspots(double n0){
 	double rho = 4.0 * n0 * ADJ_RECOMB_PROB * totwithin; 
 	
 	if (totwithin <= 0.0) {
-		cerr << "WARNING: Rejector2 requires physical distances to calculate recombination (msHOT's -r switch). " << endl;
-		cerr << "Please include physical distances in your Rejector2 input file! Proceeding without passing recombination rates to msHOT." << endl;
-		return "";
+		cerr << "WARNING: Rejector2 requires physical distances between sites to calculate recombination (msHOT's -r switch). " << endl;
+		cerr << "Please include physical distances in your Rejector2 input file!" << endl;
+		abort();
 	}
 	
 	//recombination

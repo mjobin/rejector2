@@ -124,6 +124,7 @@
 		C93DBB492124D857002FCAA3 /* src */ = {
 			isa = PBXGroup;
 			children = (
+				C9875EE02124EEF70079A49E /* simcoalrej */,
 				C93DBB4B2124D893002FCAA3 /* rejector2 */,
 				C93DBB4A2124D883002FCAA3 /* rej2run */,
 			);
@@ -161,6 +162,13 @@
 				C93DC85B2124D9310030839D /* tests.cpp */,
 			);
 			path = rejector2;
+			sourceTree = "<group>";
+		};
+		C9875EE02124EEF70079A49E /* simcoalrej */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = simcoalrej;
 			sourceTree = "<group>";
 		};
 		C9CF231E2124D81700E3FE55 = {
@@ -403,6 +411,7 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2ZV6Q2H5B8;
+				INSTALL_PATH = /Users/matt/Documents/Research/Rejector/rejector2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -412,6 +421,7 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2ZV6Q2H5B8;
+				INSTALL_PATH = /Users/matt/Documents/Research/Rejector/rejector2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

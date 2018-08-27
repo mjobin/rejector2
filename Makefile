@@ -13,12 +13,11 @@ rej2runobjects := $(patsubst %.cpp,%.o,$(wildcard src/rej2run/*.cpp))
 all : rejector2 simcoalrej2_1_2 rej2run
 
 
-	
 rejector2 : $(rejector2objects)
 	$(CXX) $(CXXFLAGS) -o rejector2 $(rejector2objects)
 
 simcoalrej2_1_2 : $(simcoalrej2_1_2objects)
-    $(CXX) $(CXXFLAGS) -o simcoalrej2_1_2 $(simcoalrej2_1_2objects)
+	$(CXX) $(CXXFLAGS) -o simcoalrej2_1_2 $(simcoalrej2_1_2objects)
 
 rej2run : $(rej2runobjects)
 	$(CXX) $(CXXFLAGS) -o rej2run $(rej2runobjects)

@@ -3250,7 +3250,7 @@ string world::makemsline(world *r, priordist *pt, bool poplock, bool macs)
 	double g;
 	stringstream msl;
 	if(macs) msl << "./macs "; 
-	else msl << "./msHOT "; //only one "sample" or eeplication per run
+	else msl << "./msHOT "; //only one "sample" or replication per run
 	
 	
 	
@@ -3523,11 +3523,17 @@ string world::makemsline(world *r, priordist *pt, bool poplock, bool macs)
 		
 		//convert time into units of 4N0 generations
 		double fnotime = eventtime / (4*n0);
+        double incfnotime = fnotime;
+        double fnotimemininc = fnotime / 1000;
+        if(fnotimemininc < 0.00001){
+            fnotimemininc = 0.00001;
+        }
 		
 		//check for movement
 		if(source != sink){ //some movement
 			if(prop == 1) { //-ej
-				msl << "-ej " << fnotime << " " << (source+1) <<  " " << (sink+1) << " ";
+				msl << "-ej " << incfnotime << " " << (source+1) <<  " " << (sink+1) << " ";
+                incfnotime += fnotimemininc;
 			}
 			else if (prop == 0){
 			}
@@ -3542,19 +3548,22 @@ string world::makemsline(world *r, priordist *pt, bool poplock, bool macs)
 		
 		//NEW SIZE
 		if(relsize != 1) { // if there is some change in SIZE // SETS GRWOTH TO ZERO
-			msl << "-en " << fnotime <<  " " <<  (sink+1) << " " << en << " ";
+			msl << "-en " << incfnotime <<  " " <<  (sink+1) << " " << en << " ";
+            incfnotime += fnotimemininc;
 		}
 		
 		//NEW GROWTH RATE
 		if(true) { // if there is some change in growth // JUST PUT IN ALL??
-			msl << "-eg " << fnotime <<  " " <<  (sink+1) << " " << newgrowth << " ";
+			msl << "-eg " << incfnotime <<  " " <<  (sink+1) << " " << newgrowth << " ";
+            incfnotime += fnotimemininc;
 		}
 		
 		//NEW MIGMAT
 		if(migid != lastmigmat) { // if there is some change in growth // JUST PUT IN ALL??
 			lastmigmat = migid;
 			int numpops = r->dmap.size();
-			msl << "-ema " << " " << fnotime << " " << numpops << " ";
+			msl << "-ema " << " " << incfnotime << " " << numpops << " ";
+            incfnotime += fnotimemininc;
 			
 			if(migid > pt->migrmat.size()){
 				cout << "Error: You appear to have specified a change to a migration matrix " << migid << " that does not exist." << endl; // cannot have halfway mig events FIX INTO MIG RATES LATER
@@ -3618,8 +3627,8 @@ int world::readmacsunformatted(world* r, string msline){
 	vector <vector <string> > inancStates;
 	string buf;
 	
-	
-	
+//    cout << "Using macs command: " << endl;
+//    cout << msline << endl;
 	//RUN MACS
 	char c;
 	string msout;
@@ -3871,7 +3880,7 @@ int world::readmacsunformatted(world* r, string msline){
 	while (ciss) { //run to end
 		
 		getline(ciss, macsline);
-		//cout << "mline: " << macsline << endl;
+//        cout << "mline: " << macsline << endl;
 		istringstream mline(macsline, istringstream::in);
 		deque<string> macstokens;
 		string macspart;
@@ -3895,14 +3904,16 @@ int world::readmacsunformatted(world* r, string msline){
 		else if(mf == "SITE:"){
 			macstokens.pop_front();
 			macstokens.pop_front();
+            macstokens.pop_front();
 			
-			//meep
+
 			
 			if(firstindiv){//First person through check 
 				
 				mf = macstokens.front();
 				
 				datalength = mf.size();
+
 				if(datalength != tot){
 					cerr << "ERROR in readmacsunformatted. Number of read samples " << datalength << " does not match the number of samples " << tot << " specified on the macs command line." << endl;
 					abort();
@@ -4006,7 +4017,7 @@ int world::readmacsunformatted(world* r, string msline){
 	
 	for(int i=0;i<segsites;i++){
 		
-		//cout << i << endl;
+
 		
 		locinfo newlocinfo;
 		newlocinfo.type = "SNP";
@@ -4100,39 +4111,38 @@ int world::readmacsunformatted(world* r, string msline){
 	
 	di =0;
 	
-	//cout << "thedata size: " << thedata.size() << endl;
+//    cout << "thedata size: " << thedata.size() << endl;
 	
 	vector<string>::iterator td = thedata.begin();
 	while(td != thedata.end()){
-		//cout << "Locus: " << di << endl;
+//        cout << "Locus: " << di << " " << td->size() << endl;
 
 
-	for(int k=0; k<td->size(); k++){
-		string inlocus = (td->substr(k, 1));
-		//cout << inlocus << " ";
-		
-		char thesnp;
-		
-		//cout << k << "| ";
-		
-		if(inlocus == "1")thesnp = 'T';
-		else if(inlocus == "0")thesnp = 'A';
-		else {
-			cerr << "ERROR in readmacsunfornmatted: Do not recognize data: " << inlocus  << endl;
-			return -1;
-		}
-		
-		//check if length matches expected length
-		if(loci[k].length != 1){
-			cerr << "Error: length of locus! Expected " << loci[k].length << endl;
-			
-			abort();
-		}
-		
-		//cout << di << " ";
-		
-		//cout << "Entering: " << thesnp << " at " << k << "-" << di << " \r" << std::flush;
-		data[k][di] = thesnp;
+        for(int k=0; k<td->size(); k++){
+            string inlocus = (td->substr(k, 1));
+//            cout << "inlocus: " << inlocus << " ";
+            
+            char thesnp;
+            
+//            cout << k << "| ";
+            
+            if(inlocus == "1")thesnp = 'T';
+            else if(inlocus == "0")thesnp = 'A';
+            else {
+                cerr << "ERROR in readmacsunfornmatted: Do not recognize data: " << inlocus  << endl;
+                return -1;
+            }
+            
+//            //check if length matches expected length
+//            if(loci[k].length != 1){
+//                cerr << "Error: length of locus! Expected " << loci[k].length << endl;
+//                abort();
+//            }
+            
+//            cout << di << " ";
+            
+//            cout << "Entering: " << thesnp << " at " << k << "-" << di << " \r" << std::flush;
+            data[k][di] = thesnp;
 		
 		
 	}

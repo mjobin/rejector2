@@ -3604,7 +3604,7 @@ string world::makemsline(world *r, priordist *pt, bool poplock, bool macs)
 	
 	
 	//if(macs) msl << " 2>/dev/null | ./msformatter"; 
-	if(macs) msl << " 2>/dev/null"; 
+    if(macs) msl << " 2>/dev/null";
 	
 	
 	//end outputms
@@ -3645,7 +3645,7 @@ int world::readmacsunformatted(world* r, string msline){
 	istringstream ciss(msout, istringstream::in);
 	string mscmdline;
 	getline(ciss, mscmdline);
-	//cout << "CMDLINE:" << mscmdline << endl;
+//    cout << "CMDLINE:" << mscmdline << endl;
 	
 	
 	istringstream mcmd(mscmdline, istringstream::in);
@@ -3654,7 +3654,7 @@ int world::readmacsunformatted(world* r, string msline){
 	while( mcmd >> msclpart )     
 	{
 		
-		//cout << msclpart << endl;
+//        cout << msclpart << endl;
 		mstokens.push_back(msclpart);
 		
 	}
@@ -3953,6 +3953,16 @@ int world::readmacsunformatted(world* r, string msline){
 		
 	}
 	
+//    cout << "MACS reports total sites " << totalsites << endl;
+//    cout << "MACS reports total sample " << totalsamples << endl;
+    
+    if (totalsites < 2) {
+        return -1;  //Very likely MaCS failed to run
+    }
+    
+    if (totalsamples < 2) {
+        return -1; //Very likely MaCS failed to run
+    }
 	
 	//Assign all to one population if -I not used
 	if(nbypop.empty()) nbypop.push_back(tot);
@@ -3983,12 +3993,15 @@ int world::readmacsunformatted(world* r, string msline){
 		cerr << "ERROR in readmacsunformatted. Number of read samples " << datalength << " does not match the number of samples " << totalsamples << " specified in macs output TOTAL_SAMPLES:." << endl;
 		abort();
 	}
+    
+    
 	
 	if (datawidth != totalsites) {
 		cerr << "ERROR in readmacsunformatted. Number of read sites " << datawidth << " does not match the number of samples " << totalsites << " specified in macs output TOTAL_SITES:." << endl;
 		abort();
 	}
 	
+    cout << "Total sites " <<datawidth << endl;
 	
 	
 	//Create data

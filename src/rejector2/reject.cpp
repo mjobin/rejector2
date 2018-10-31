@@ -169,7 +169,7 @@ bool rejectcomparestats(world* r, world* s, double alpha, string testname, rejre
 		abort();
 	}
 	
-	//cout << "rejectcomparestats on " << testname << endl;
+//    cout << "rejectcomparestats on " << testname << endl;
 	
 	sresult::const_iterator rp = rtests->second.result.begin();
 
@@ -183,24 +183,24 @@ bool rejectcomparestats(world* r, world* s, double alpha, string testname, rejre
 	while(rp != rtests->second.result.end()){
 		sresult::const_iterator sp = stests->second.result.find(rp->first);
 		if(sp != stests->second.result.end()){
-			//cout << "rp: " << rp->first << "  sp: " << sp->first << endl;
+//            cout << "rp: " << rp->first << "  sp: " << sp->first << endl;
 			map<string, map<string, vector<double> > >::const_iterator rq = rp->second.begin();
 			
 			while(rq != rp->second.end()){
 				map<string, map<string, vector<double> > >::const_iterator sq = sp->second.find(rq->first);
-				//cout << "rq: " << rq->first << endl;
+//                cout << "rq: " << rq->first << endl;
 				if(sq != sp->second.end()){
-					//cout << "rq: " << rq->first << "  sq: " << sq->first << endl;
+//                    cout << "rq: " << rq->first << "  sq: " << sq->first << endl;
 					map<string, vector<double> >::const_iterator rr = rq->second.begin();
 					
 					while(rr != rq->second.end()){
 						map<string, vector<double> >::const_iterator sr = sq->second.find(rr->first);
 						if(sr != sq->second.end()){
-							//cout << "rr: " << rr->first << "  sr: " << sr->first << endl;
-							vector<double>::const_iterator rs = rr->second.begin(); 
+//                            cout << "rr: " << rr->first << "  sr: " << sr->first << endl;
+							vector<double>::const_iterator rs = rr->second.begin();
 							vector<double>::const_iterator ss = sr->second.begin();//no if statemtn here as its assumed vecotrs are of same length
 								while(rs != rr->second.end()){
-									//cout << "rs: " << *rs << "  ss: " << *ss << endl;
+//                                    cout << "rs: " << *rs << "  ss: " << *ss << endl;
 									//if(*rs != -999 && *ss != -999 && *rs != 0.0){//don't test if either datum is missing or if there's a division by zero
 									if(*rs != -999 && *ss != -999){//don't test if either datum is missing 
 										numbertot++;

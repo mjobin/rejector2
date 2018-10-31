@@ -2901,6 +2901,16 @@ void world::multalleleLDp()
 	
 }
 
+
+//---------------------------------------------
+//Function Name:
+//Function Definition:
+void world::oopsie(string k)
+{
+    cout << "NOTE: Statistic " << k << "is currently disocnnected for debugging." << endl;
+    
+}
+
 //---------------------------------------------
 //Class Name 
 //Class Definition: Chi Square LD
@@ -3399,10 +3409,20 @@ void world::dotests(priordist* pt, bool timetests){
 		//else if(p->first == "BetaAvSub") betaimbalanceavsub();
 		else if(p->first == "BetaAv-ANC") betaimbalanceavanc();
 		else if(p->first == "BetaAv-DEC") betaimbalanceavdec();
-		else if(p->first == "LD") LD();
-		else if(p->first == "LDadj") LDadj();
-		else if(p->first == "LDChiSquare") multalleleLD();
-		else if(p->first == "LDChiSquarePvalue") multalleleLDp();
+        else if(p->first == "LD") LD();
+        else if(p->first == "LDadj") LDadj();
+        else if(p->first == "LDChiSquare") multalleleLD();
+        else if(p->first == "LDChiSquarePvalue") multalleleLDp();
+        
+        
+//        else if(p->first == "LD") oopsie(p->first);
+//        pt->alphalist.erase("LD")
+//        else if(p->first == "LDadj") oopsie(p->first);
+//        else if(p->first == "LDChiSquare") oopsie(p->first);
+//        else if(p->first == "LDChiSquarePvalue") oopsie(p->first);
+
+        
+        
 		else if(p->first == "RangeofLocus") rangeoflocus();
 		else if(p->first == "RangeofLocusAv") rangeoflocusav();
 		else if(p->first == "SampleSize") samplesize();

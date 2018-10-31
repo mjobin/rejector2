@@ -471,7 +471,7 @@ public:
 	void longsharedwithin();
     void varrohlength();
 
-
+    void oopsie(string k);
 
 
     void counts(ostream &out);

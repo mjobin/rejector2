@@ -59,8 +59,6 @@ Beta	0.1
 BetaAv	0.1
 BetaSub	0.1
 BetaAvSub	0.1
-LD	0.1
-LDChiSquare	0.1
 RangeofLocus	0.1
 SampleSize	0.1
 SampleSizeSub	0.1

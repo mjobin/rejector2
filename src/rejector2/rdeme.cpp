@@ -473,10 +473,11 @@ world::world(){
 world::~world()
 {
 	
-	
-	//DELETE DATA
-	for(int i = 0 ; i < datalength ; i++ ) delete[] data[i];
-	delete[] data;
+    if (broken == false) {
+        //DELETE DATA
+        for(int i = 0 ; i < datalength ; i++ ) delete[] data[i];
+        delete[] data;
+    }
 	
 	/*
 	 vector<locinfo>::iterator dell =  loci.begin();

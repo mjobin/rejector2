@@ -543,7 +543,7 @@ int timingrun(world *r, priordist *pt, string baseFile){
 world tt = runsim(r, pt, false, parFile);
 	
 	if(tt.broken){
-		cerr << "Error! Simulaiton run failed during time trial." << endl;
+		cerr << "Error! Simulation run failed during time trial." << endl;
 		return -1;
 		
 	}
